@@ -1,2 +1,4 @@
-# college-calculator-project
-A simple GUI calculator using java swing
+This is just a simple GUI calculator for 1st grade students to their [final project](programming-one-final-project.pdf). 
+
+![](pic/calculator.png)
+
