@@ -7,11 +7,13 @@ public class Calculator implements ActionListener {
     JFrame frame;   JPanel numbers_panel, operators_panel;   JTextField text_field;
     Font font = new Font(Font.SANS_SERIF, Font.BOLD, 20);
 
-    JButton[] number_buttons = new JButton[10]; // numbers buttons
     String[] numbers = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "0"};
+    JButton[] number_buttons = new JButton[numbers.length]; // numbers buttons
+
     //                            0     1    2    3    4    5    6    7   8        9       10
     String[] operation_symbols = {"+", "-", "/", "*", "%", "^", "!", ".", "=", "Delete", "Clear"};
     JButton[] operation_buttons = new JButton[operation_symbols.length];
+    
     JButton[] func_buttons = new JButton[operation_symbols.length];
 
     String operator = "";
