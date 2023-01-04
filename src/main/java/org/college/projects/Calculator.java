@@ -6,14 +6,11 @@ import java.awt.event.*;
 public class Calculator implements ActionListener {
     JFrame frame;   JPanel numbers_panel, operators_panel;   JTextField text_field;
     Font font = new Font(Font.SANS_SERIF, Font.BOLD, 20);
-
     String[] numbers = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "0"};
     JButton[] number_buttons = new JButton[numbers.length]; // numbers buttons
-
     //                            0     1    2    3    4    5    6    7   8        9       10
     String[] operation_symbols = {"+", "-", "/", "*", "%", "^", "!", ".", "=", "Delete", "Clear"};
     JButton[] operation_buttons = new JButton[operation_symbols.length];
-    
     JButton[] func_buttons = new JButton[operation_symbols.length];
 
     String operator = "";
@@ -29,11 +26,6 @@ public class Calculator implements ActionListener {
             panel.add(buttons[i]);
         }
     }
-    public static void set_numbers(JButton[] number_buttons, String[] numbers){
-        for(int i = 0; i < numbers.length; i++){
-            number_buttons[i] = new JButton(numbers[i]);
-        }
-    }
     public void create_buttons(JButton[] buttons){
         for(int i = 0; i < buttons.length; i++){
             buttons[i].addActionListener(this);
@@ -44,7 +36,7 @@ public class Calculator implements ActionListener {
     public static JButton[] func_buttons(JButton[] func_buttons, JButton[] buttons){
         for(int i = 0; i < buttons.length; i++){
             func_buttons[i] = buttons[i];
-        }
+     `   }
         return func_buttons;
     }
     // set operation symbols
@@ -69,7 +61,7 @@ public class Calculator implements ActionListener {
         set_buttons(operation_buttons, operation_symbols); // set operations buttons
         create_buttons(func_buttons(func_buttons, operation_buttons));
 
-        set_numbers(number_buttons, numbers);
+        set_buttons(number_buttons, numbers); // set number buttons.
         create_buttons(number_buttons);
 
         numbers_panel = new JPanel(); // create a panel for buttons
